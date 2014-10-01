@@ -312,6 +312,7 @@ public:
       }
       os << "\tCost: " << total << std::endl;
     }
+
   }
 };
 
