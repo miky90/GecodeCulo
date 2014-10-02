@@ -14,13 +14,15 @@ int _tmain(int argc, char* argv[])
 	opt.parse(argc, argv);
 	//creo problema
 	int maxNumber = 300;
-	for (int n = 1; n < 27; n++){
+	//ciclo creazione file
+	for (int n = 1; n < 21; n++){
 		std::string nome_file = "out";
 		nome_file.append(std::to_string(n));
 		nome_file.append(".txt");
 		std::ofstream out(nome_file);
 		std::streambuf *coutbuf = std::cout.rdbuf(); //save old buf
 		std::cout.rdbuf(out.rdbuf());
+		//ciclo matrici
 		for (int k = 3; k < 27; k++) {
 			PA_n = k;
 			PA_d = new int[PA_n * PA_n];
