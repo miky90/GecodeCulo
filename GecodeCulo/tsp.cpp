@@ -175,7 +175,7 @@ public:
         break;
       }
     }
-    if (assigned) {
+    /*if (assigned) {
       os << "\tTour: ";
       int i=0;
       do {
@@ -191,7 +191,7 @@ public:
       }
       os << "\tCost: " << total << std::endl;
     }
-
+	*/
   }
 };
 

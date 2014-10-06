@@ -71,7 +71,7 @@ int _tmain(int argc, char* argv[])
 					std::cout << ",";
 			}
 			std::cout << std::endl;
-			IntMinimizeScript::run<TSP, BAB, SizeOptions>(opt);
+			IntMinimizeScript::run<TSP, DFS, SizeOptions>(opt);
 		}
 
 		std::cout << "Complete!" << std::endl;
