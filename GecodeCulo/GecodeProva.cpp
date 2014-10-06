@@ -7,15 +7,32 @@
 
 int _tmain(int argc, char* argv[])
 {
+	int maxNumber;
+	int firstFile;
+	int lastFile;
+	int firstMatrix;
+	int lastMatrix;
+
+	std::cout << "max distance:";
+	std::cin >>maxNumber;
+	std::cout << "first output file:";
+	std::cin >> firstFile;
+	std::cout << "last output file:";
+	std::cin >> lastFile;
+	std::cout << "first matrix:";
+	std::cin >> firstMatrix;
+	std::cout << "last matrix:";
+	std::cin >> lastMatrix;
+
 	std::cout << "Wait..." << std::endl;
 	SizeOptions opt("TSP");
 	opt.solutions(0);
 	opt.icl(ICL_DOM);
 	opt.parse(argc, argv);
 	//creo problema
-	int maxNumber = 300;
+	
 	//ciclo creazione file
-	for (int n = 1; n < 21; n++){
+	for (int n = firstFile; n < lastFile+1; n++){
 		std::string nome_file = "out";
 		nome_file.append(std::to_string(n));
 		nome_file.append(".txt");
@@ -23,7 +40,7 @@ int _tmain(int argc, char* argv[])
 		std::streambuf *coutbuf = std::cout.rdbuf(); //save old buf
 		std::cout.rdbuf(out.rdbuf());
 		//ciclo matrici
-		for (int k = 3; k < 27; k++) {
+		for (int k = firstMatrix; k < lastMatrix+1; k++) {
 			PA_n = k;
 			PA_d = new int[PA_n * PA_n];
 			for (int i = 0; i < PA_n; i++) {
